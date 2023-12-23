@@ -1,0 +1,16 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--mediumGray);
+  padding-bottom: var(--size10);
+  margin-bottom: var(--size10);
+}
+
+.slideshow-link {
+  text-transform: uppercase;
+font-size: var(--fontSize2);
+letter-spacing: 2.571px;
+text-decoration: none;
+color: var(--darkGray);
+}

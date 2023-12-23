@@ -1,0 +1,26 @@
+.gallery {
+display: grid;
+grid-template-columns: 1fr 1fr;
+margin-bottom: 7.5rem;
+}
+.gallery__description {
+  margin-top: -4rem;
+  max-width: 36ch;;
+}
+.gallery__source-link {
+display: block;
+font-size: var(--fontSize1);
+font-weight: var(--bold);
+line-height: normal;
+letter-spacing: var(--double);
+text-decoration-line: underline;
+color: var(--darkGray);
+margin-top: var(--size100);
+text-decoration: underline;
+text-transform: uppercase;
+
+&:hover {
+  color: var(--black);
+}
+
+}
