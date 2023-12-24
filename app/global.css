@@ -181,7 +181,6 @@ body {
   display: flex;
   flex-direction: column;
   font-weight: var(--regular);
-  padding: var(--size10);
 }
 html,
 body {
@@ -701,12 +700,13 @@ li {
 }
 
 .heading-l {
+  font-size:  clamp(10rem, 30vw, 20rem);
   font-size: var(--fontSize7);
   font-weight: var(--bold);
   line-height: var(--lineHeight7);
 }
 .heading-xl {
-  font-size:  clamp(10rem, 30vw, 20rem);
+  font-size:  clamp(10rem, 20vw, 20rem);
   font-weight: var(--bold);
   line-height: 15rem;
   color: var(--lightGray)
@@ -717,3 +717,22 @@ opacity: .5;
 pointer-events: none;
 cursor: not-allowed;
 }
+.main-content {
+  margin: auto;
+}
+
+
+/* Large desktop */
+@media (min-width: 1379px) {
+
+.main-content {
+  max-width: 1440px;
+  width: 100%;
+}
+}
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 767px) {  }
+
+/* Landscape phones and down */
+@media (min-width: 480px) { }

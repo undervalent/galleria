@@ -14,7 +14,7 @@ import { links as HeaderLinks, Header } from "./components/header";
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: globalStyles },
-  ...HeaderLinks()
+  ...HeaderLinks(),
 ];
 
 export default function App() {
@@ -28,7 +28,9 @@ export default function App() {
       </head>
       <body>
         <Header />
-        <Outlet />
+        <main className="main-content">
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
