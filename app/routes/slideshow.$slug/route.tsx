@@ -30,6 +30,7 @@ export default function Gallery() {
 
   return (
     <>
+    <main className="main-content">
       <section className="gallery">
         <section className="artist">
           <img className="artist__painting" src={active.images.hero.large} alt={active.name} />
@@ -51,7 +52,8 @@ export default function Gallery() {
 
 
       </section>
-      <Footer active={active}/>
+      </main>
+      <Footer />
       </>
   )
 }

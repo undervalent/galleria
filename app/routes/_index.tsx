@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
+import { data } from "~/data";
+import { Card } from "~/components/card";
 
 export const meta: MetaFunction = () => {
   return [
@@ -7,10 +9,12 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+
+
 export default function Index() {
   return (
-    <section>
-    MAIN
-    </section>
+    <main className="masonry">
+    {data.map(galleryItem => <Card key={galleryItem.slug} galleryItem={galleryItem} /> )}
+    </main>
   );
 }

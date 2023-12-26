@@ -10,11 +10,12 @@ import {
 } from "@remix-run/react";
 import globalStyles from './global.css'
 import { links as HeaderLinks, Header } from "./components/header";
-
+import { links as cardLinks } from "./components/card";
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: globalStyles },
   ...HeaderLinks(),
+  ...cardLinks(),
 ];
 
 export default function App() {
@@ -28,9 +29,7 @@ export default function App() {
       </head>
       <body>
         <Header />
-        <main className="main-content">
           <Outlet />
-        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

@@ -1,0 +1,38 @@
+.card {
+  display: inline-block;
+}
+.gallery-card {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  object-fit: contain;
+  position: relative;
+}
+.gallery-card__caption {
+  position: absolute;
+  bottom: 0;
+  height: 17rem;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.84) 100%);
+  width: 100%;
+  padding: 2.2rem;
+}
+.gallery-card__img {
+  max-width: 100%;
+}
+.gallery-card__heading {
+  color: #FFF;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.gallery-card__artist {
+  color: var(--mediumGray);
+  font-size: 13px;
+}
+.gallery-card__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}

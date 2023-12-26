@@ -1,16 +1,33 @@
 import React from 'react'
-import { Link } from '@remix-run/react';
+import { Link , useLoaderData } from '@remix-run/react';
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
-import footerStyles from './footer.css'
+import type { LinksFunction , DataFunctionArgs } from "@remix-run/node";
+import footerStyles from './footer.css';
+
+import { json } from '@remix-run/node';
+import { groupedData } from '~/data';
+import { invariantResponse } from '~/lib/utils';
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: footerStyles },
 ];
 
-export function Footer({active}) {
-console.log('ACTIVE -->',active)
+export async function loader({ params}: DataFunctionArgs) {
+  const { slug } = params;
+  if (!slug) return null;
+  const grouped = groupedData();
+  const active = grouped[slug];
+
+  invariantResponse(active, `There is no galler with ${slug} id`);
+
+  return json({ active });
+}
+
+export function Footer() {
+  const data = useLoaderData<typeof loader>();
+  if (!data?.active) return null;
+  const {active} = data;
   return (
     <footer className="main-footer">
       <div style={{ width: active.percentage }} className="main-footer__percent"></div>
