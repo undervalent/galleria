@@ -1,5 +1,5 @@
 import React from 'react'
-import { json } from '@remix-run/node';
+import { json } from '@netlify/remix-runtime';
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import { cssBundleHref } from "@remix-run/css-bundle";
 import { Footer , links as footerLinks } from '~/components/footer';
