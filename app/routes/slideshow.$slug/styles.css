@@ -4,6 +4,7 @@
   padding: 0 2.4rem;
   width: 100%;
   margin: auto auto 3rem auto;
+  position: relative;
 }
 .gallery__description {
   margin-top: -5.5rem;
@@ -64,6 +65,10 @@ text-transform: uppercase;
 .artist__painting {
   max-width: 100%;
 }
+.artist__modal {
+  position: absolute;
+  top: 7rem;
+}
 
 @media (min-width: 767px) {
 .gallery__year {
@@ -88,8 +93,9 @@ text-transform: uppercase;
 
   .artist__portrait {
     position: absolute;
-    right: -8rem;
-    top: 30.7rem;
+    right: -15.8rem;
+    top: 30.5rem;
+    max-width: 12.8rem;
   }
 
   .gallery__content {
@@ -101,6 +107,9 @@ text-transform: uppercase;
     margin-top: -4rem;
     margin-left: 20rem;
   }
+.artist__modal {
+  position: static;
+}
 }
 @media (min-width: 1379px) {
   .gallery {
@@ -121,8 +130,8 @@ text-transform: uppercase;
   }
   .artist__portrait {
     position: absolute;
-    right: -8rem;
-    top: 93%;
+    right: -16rem;
+    top: 89%;
   }
 
   .artist__painting {

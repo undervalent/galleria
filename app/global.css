@@ -725,7 +725,7 @@ cursor: not-allowed;
   max-width: 144rem;
   margin: auto;
   display: grid;
-  gap: 1rem;
+  gap: 4rem;
   grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr));
   grid-auto-flow: dense;
 }

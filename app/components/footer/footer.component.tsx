@@ -7,6 +7,8 @@ import footerStyles from './footer.css';
 import { json } from '@remix-run/node';
 import { groupedData } from '~/data';
 import { invariantResponse } from '~/lib/utils';
+import NextIcon from '~/assets/shared/icon-next-button.svg';
+import BackIcon from '~/assets/shared/icon-back-button.svg';
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -38,11 +40,11 @@ export function Footer() {
         </div>
         <nav className="main-footer__navigation">
           <Link to={`../slideshow/${active.previousSlug}`} aria-disabled={!active.previousSlug} className={`main-footer__link ${!active.previousSlug ? 'disabled' : ''}`}>
-            Previous
+            <img src={BackIcon} alt="previous" />
           </Link>
 
           <Link to={`../slideshow/${active.nextSlug}`} aria-disabled={!active.nextSlug} className={`main-footer__link ${!active.nextSlug ? 'disabled' : ''}`}>
-            Next
+            <img src={NextIcon} alt="next" />
           </Link></nav>
       </section>
     </footer>
