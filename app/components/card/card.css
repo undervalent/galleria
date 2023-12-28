@@ -1,6 +1,7 @@
 .gallery-card {
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
 }
 .gallery-card__figure {
   margin: 0;
