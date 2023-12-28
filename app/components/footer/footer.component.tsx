@@ -4,7 +4,7 @@ import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction , DataFunctionArgs } from "@remix-run/node";
 import footerStyles from './footer.css';
 
-import { json } from '@remix-run/node';
+import { json } from '@netlify/remix-runtime';
 import { groupedData } from '~/data';
 import { invariantResponse } from '~/lib/utils';
 import NextIcon from '~/assets/shared/icon-next-button.svg';

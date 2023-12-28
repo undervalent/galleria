@@ -1,5 +1,5 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@netlify/remix-runtime";
 import {
   Links,
   LiveReload,
@@ -8,6 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+
 import globalStyles from './global.css'
 import { links as HeaderLinks, Header } from "./components/header";
 import { links as cardLinks } from "./components/card";
@@ -17,6 +18,7 @@ export const links: LinksFunction = () => [
   ...HeaderLinks(),
   ...cardLinks(),
 ];
+
 
 export default function App() {
   return (
@@ -29,7 +31,7 @@ export default function App() {
       </head>
       <body>
         <Header />
-          <Outlet />
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
