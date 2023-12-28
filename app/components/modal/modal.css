@@ -1,0 +1,82 @@
+.modal__trigger {
+  width: 15.2rem;
+  height: 4rem;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, .7);
+  color: var(--white);
+  border: none;
+  margin-top: -6rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: var(--bold);
+  cursor: pointer;
+  letter-spacing: .2143rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.modal__close {
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background-color: transparent;
+  position: absolute;
+  top: -4.5rem;
+  border: none;
+  right: 0;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: var(--bold);
+  letter-spacing: .3rem;
+  cursor: pointer;
+}
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, .7);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal__image {
+  width: 100%;
+
+}
+.modal__content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 65rem;
+  max-height: 90%;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal__content:focus {
+  outline: none;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+

@@ -1,0 +1,140 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 2.4rem;
+  width: 100%;
+  margin: auto auto 3rem auto;
+  position: relative;
+}
+.gallery__description {
+  margin-top: -5.5rem;
+  max-width: 36ch;
+  color: var(--darkGray);
+}
+.gallery__source-link {
+display: block;
+font-size: var(--fontSize1);
+font-weight: var(--bold);
+line-height: normal;
+letter-spacing: var(--double);
+text-decoration-line: underline;
+color: var(--darkGray);
+margin-top: 6.8rem;
+text-decoration: underline;
+text-transform: uppercase;
+
+&:hover {
+  color: var(--black);
+}
+
+}
+.gallery__content {
+  display: flex;
+  justify-content: flex-end;
+}
+.gallery__year {
+  text-align: right;
+  font-size:10rem;
+}
+
+.artist {
+  display: grid;
+  position: relative;
+  max-width: 47.5rem;
+}
+.artist__card {
+  background: white;
+  max-width: 28rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: -9rem;
+  padding: 2.4rem;
+}
+.artist__title {
+  font-size:  var(--fontSize6);
+}
+.artist__name {
+  color: var(--darkGray);
+  font-size: var(--fontSize4);
+  font-weight: var(--regular);
+}
+.artist__portrait {
+  max-width: 6.4rem;
+}
+
+.artist__painting {
+  max-width: 100%;
+}
+.artist__modal {
+  position: absolute;
+  top: 7rem;
+}
+
+@media (min-width: 767px) {
+.gallery__year {
+  text-align: left;
+  font-size: 20rem;
+}
+
+  .artist__card {
+    position: absolute;
+    right: -22.3rem;
+    top: 9rem;
+    background: white;
+    width: 44.5rem;
+    padding: 0 0 6.5rem 6.5rem;
+    gap: 2.4rem;
+    max-width: 100%;
+  }
+  .artist__title {
+    font-size: var(--fontSize7);
+    max-width: 8ch;
+  }
+
+  .artist__portrait {
+    position: absolute;
+    right: -15.8rem;
+    top: 30.5rem;
+    max-width: 12.8rem;
+  }
+
+  .gallery__content {
+    justify-content: flex-end;
+    margin-top: 5rem;
+  }
+
+  .gallery__description {
+    margin-top: -4rem;
+    margin-left: 20rem;
+  }
+.artist__modal {
+  position: static;
+}
+}
+@media (min-width: 1379px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 7.5rem;
+    margin-top: 10rem;
+  }
+  .gallery__description {
+    margin-top: -4rem;
+    margin-left: 0;
+  }
+
+  .artist__card {
+    right: -38rem;
+  }
+  .artist__title {
+    max-width: 8ch;
+  }
+  .artist__portrait {
+    position: absolute;
+    right: -16rem;
+    top: 89%;
+  }
+
+  .artist__painting {
+    max-width: 47.5rem;
+  }
+}
