@@ -13,7 +13,7 @@ export const meta: MetaFunction = () => {
 const breakpointColumnsObj = {
   default: 4,
   1100: 2,
-  500: 1
+  767: 1
 };
 
 export default function Index() {

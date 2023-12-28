@@ -9,8 +9,16 @@
 
 .slideshow-link {
   text-transform: uppercase;
-font-size: var(--fontSize2);
-letter-spacing: 2.571px;
-text-decoration: none;
-color: var(--darkGray);
+  letter-spacing: 2.571px;
+  text-decoration: none;
+  color: var(--darkGray);
+  font-size: var(--fontSize1);
+}
+
+
+@media (min-width: 767px) {
+
+.slideshow-link {
+  font-size: var(--fontSize2);
+}
 }
